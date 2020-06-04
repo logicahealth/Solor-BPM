@@ -1,0 +1,692 @@
+<semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns="http://www.trisotech.com/definitions/_18543874-08b0-4c9d-ba2f-8d59b58b3384" name="MedicalTriage3" id="_18543874-08b0-4c9d-ba2f-8d59b58b3384"  xmlns:triso="http://www.trisotech.com/2015/triso/modeling"  xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"  xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"  xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"  xmlns:trisodmn="http://www.trisotech.com/2016/triso/dmn"  xmlns:feel="https://www.omg.org/spec/DMN/20191111/FEEL/"  xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase"  xmlns:drools="http://www.drools.org/kie/dmn/1.1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:rss="http://purl.org/rss/2.0/"  xmlns:openapi="https://openapis.org/omg/extension/1.0"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"  namespace="http://www.trisotech.com/definitions/_18543874-08b0-4c9d-ba2f-8d59b58b3384" exporter="Decision Modeler" exporterVersion="6.11.3" triso:logoChoice="Default">
+    <semantic:extensionElements />
+    <semantic:itemDefinition name="tMedicalTriageObservations" label="tMedicalTriageObservations">
+        <semantic:extensionElements>
+            <triso:semanticLink name="tMedicalTriageObservations" id="_6f25df51-6d41-438a-894d-7f8edd62da7d" uri="http://www.trisotech.com/definitions/_06dc00d0-1715-41d8-8343-483b6e8a11b3#tMedicalTriageObservations" />
+        </semantic:extensionElements>
+        <semantic:itemComponent name="Speaking in short phrases evident respiratory distress 473330008 Chronic respiratory disease questionnaire dyspnea subscale score observable entity" id="_d39ff29d-6db2-46e5-8c96-d75c3d41fc87">
+            <semantic:typeRef>tPresentAbsent</semantic:typeRef>
+        </semantic:itemComponent>
+        <semantic:itemComponent name="Using Accessory muscles of respiration No observation code" id="_832f8a9c-70a7-486c-89fb-2cd8b5346be6">
+            <semantic:typeRef>tPresentAbsent</semantic:typeRef>
+        </semantic:itemComponent>
+        <semantic:itemComponent name="Bluish lips/fingers 364131009 Color of lip observable entity 364533002 Color of skin observable entity 7569003 Finger structure body structure" id="_61e497f2-4674-4894-adc4-75025b29c567">
+            <semantic:typeRef>tPresentAbsent</semantic:typeRef>
+        </semantic:itemComponent>
+        <semantic:itemComponent name="Chest Pressure/Tightness/Pain 364624006 Pain / sensation observable observable entity 302551006 Entire thorax body structure" id="_a6c2de78-07c8-4798-9068-f8c4e214e7bf">
+            <semantic:typeRef>tPresentAbsent</semantic:typeRef>
+        </semantic:itemComponent>
+        <semantic:itemComponent name="Unilateral Weakness 271909001 Neurology examination finding observable entity" id="_05f00de5-002d-4095-9b0a-18d4eb117400">
+            <semantic:typeRef>tPresentAbsent</semantic:typeRef>
+        </semantic:itemComponent>
+        <semantic:itemComponent name="Pneumonia LP90009-9 Pneumonia in last 7 days" id="_cfb94f96-2a72-4ca2-95ed-cb6a43e64bd3">
+            <semantic:typeRef>tPresentAbsent</semantic:typeRef>
+        </semantic:itemComponent>
+        <semantic:itemComponent name="Bronchitis No observation code" id="_67e52bfa-97d5-4e57-9899-1e272e5593cd">
+            <semantic:typeRef>tPresentAbsent</semantic:typeRef>
+        </semantic:itemComponent>
+        <semantic:itemComponent name="Dehydration 405006006 Hydration status observable entity" id="_315232bd-fa82-40f0-9e74-cd5c0e7b6470">
+            <semantic:typeRef>tPresentAbsent</semantic:typeRef>
+        </semantic:itemComponent>
+        <semantic:itemComponent name="Other Severe clinical condition 74964007 Other qualifier value 24484000 Severe severity modifier qualifier value 363788007 Clinical history/examination observable observable entity" id="_8103b4d5-bfa7-45c9-bcf7-a8dc90211580">
+            <semantic:typeRef>tPresentAbsent</semantic:typeRef>
+        </semantic:itemComponent>
+        <semantic:itemComponent name="Other Moderate clinical condition 74964007 Other qualifier value 6736007 Moderate severity modifier qualifier value 363788007 Clinical history/examination observable observable entity" id="_1f4013e0-1b52-430c-bb9d-4e39060d12cd">
+            <semantic:typeRef>tPresentAbsent</semantic:typeRef>
+        </semantic:itemComponent>
+        <semantic:itemComponent name="Mild clinical condition 255604002 Mild qualifier value 363788007 Clinical history/examination observable observable entity" id="_84636181-bb0c-4111-9a5b-a89d12d6eca8">
+            <semantic:typeRef>tPresentAbsent</semantic:typeRef>
+        </semantic:itemComponent>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="tPresentAbsent" label="tPresentAbsent">
+        <semantic:extensionElements>
+            <triso:semanticLink name="tPresentAbsent" id="_ce574b7e-ea07-4e19-9846-76f7842b4dcb" uri="http://www.trisotech.com/definitions/_06dc00d0-1715-41d8-8343-483b6e8a11b3#tPresentAbsent" />
+        </semantic:extensionElements>
+        <semantic:typeRef>string</semantic:typeRef>
+        <semantic:allowedValues triso:constraintsType="enumeration">
+            <semantic:text>"52101004 |Present (qualifier value)|","2667000 |Absent (qualifier value)|"</semantic:text>
+        </semantic:allowedValues>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="tSeverity" label="tSeverity">
+        <semantic:extensionElements>
+            <triso:semanticLink name="tSeverity" id="_cc394f64-c429-4e88-91cd-44d7aaa68092" uri="http://www.trisotech.com/definitions/_06dc00d0-1715-41d8-8343-483b6e8a11b3#tSeverity" />
+        </semantic:extensionElements>
+        <semantic:typeRef>string</semantic:typeRef>
+        <semantic:allowedValues triso:constraintsType="enumeration">
+            <semantic:text>"24484000 |Severe","6736007 |Moderate","255604002 |Mild","84387000 |Asymptomatic (finding)|","Error"</semantic:text>
+        </semantic:allowedValues>
+    </semantic:itemDefinition>
+    <semantic:decisionService name="Whole Model Decision Service" id="_18543874-08b0-4c9d-ba2f-8d59b58b3384_DS" triso:dynamicDecisionService="true" triso:wholeModelService="true">
+        <semantic:variable name="Whole Model Decision Service" id="_18543874-08b0-4c9d-ba2f-8d59b58b3384_DS_VAR" typeRef="Any" />
+        <semantic:outputDecision href="#_62e5163b-f769-4ecc-bdaf-a534ad0f439a" />
+        <semantic:inputData href="#_6c7754be-a4e3-4aab-b6b7-81ba7c8ad22b" />
+    </semantic:decisionService>
+    <semantic:decisionService name="Diagram Page 1" id="_00bc24d1-d08c-4d16-b1b0-1c4690c0fcb8_DS" triso:dynamicDecisionService="true">
+        <semantic:variable name="Diagram Page 1" id="_00bc24d1-d08c-4d16-b1b0-1c4690c0fcb8_DS_VAR" typeRef="Any" />
+        <semantic:outputDecision href="#_62e5163b-f769-4ecc-bdaf-a534ad0f439a" />
+        <semantic:inputData href="#_6c7754be-a4e3-4aab-b6b7-81ba7c8ad22b" />
+    </semantic:decisionService>
+    <semantic:inputData name="Medical Triage Observations" id="_6c7754be-a4e3-4aab-b6b7-81ba7c8ad22b">
+        <semantic:extensionElements>
+            <triso:semanticLink name="COVID19TYPES - Medical Triage Observations" id="_51e5d50b-9051-4bda-af1f-c482a7ad35ee" uri="http://www.trisotech.com/definitions/_06dc00d0-1715-41d8-8343-483b6e8a11b3#_d2921991-4cfc-462e-8ee8-f337af12dad0" modelURI="http://www.trisotech.com/definitions/_06dc00d0-1715-41d8-8343-483b6e8a11b3" />
+        </semantic:extensionElements>
+        <semantic:variable name="Medical Triage Observations" id="_dea6d20d-8b55-4a80-8251-ffea79ae0dc5" typeRef="tMedicalTriageObservations" />
+    </semantic:inputData>
+    <semantic:decision name="Medical Triage Findings" id="_62e5163b-f769-4ecc-bdaf-a534ad0f439a">
+        <semantic:extensionElements>
+            <triso:semanticLink name="COVID19TYPES - Medical Triage Findings" id="_339acd0d-d1ba-4206-8be8-56495613c129" uri="http://www.trisotech.com/definitions/_06dc00d0-1715-41d8-8343-483b6e8a11b3#_22114abe-fea5-46c9-a08f-8b42383ec6bc" modelURI="http://www.trisotech.com/definitions/_06dc00d0-1715-41d8-8343-483b6e8a11b3" />
+        </semantic:extensionElements>
+        <semantic:variable name="Medical Triage Findings" id="_4e58dc2e-bea3-4af2-9b13-8ef473eae472" typeRef="tSeverity" />
+        <semantic:informationRequirement id="_2b6ef027-6947-4292-945b-0f2f7ccd498d">
+            <semantic:requiredInput href="#_6c7754be-a4e3-4aab-b6b7-81ba7c8ad22b" />
+        </semantic:informationRequirement>
+        <semantic:decisionTable id="_2bde1974-cc1b-492c-8291-697e408c6a5e" typeRef="tSeverity" hitPolicy="FIRST" outputLabel="Medical Triage Findings" triso:expressionId="_719a7f5f-7e11-4561-b5b4-fbc1db052534">
+            <semantic:input id="_4b1da5ce-1220-4762-a7e1-2a6acd98ac22" label="Medical Triage Observations.Speaking in short phrases evident respiratory distress 473330008 Chronic respiratory disease questionnaire dyspnea subscale score observable entity" triso:allowNull="true">
+                <semantic:inputExpression typeRef="tPresentAbsent">
+                    <semantic:text>Medical Triage Observations.Speaking in short phrases evident respiratory distress 473330008 Chronic respiratory disease questionnaire dyspnea subscale score observable entity</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"52101004 |Present (qualifier value)|","2667000 |Absent (qualifier value)|",null</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:input id="_a2e33296-adda-44c1-a38f-6363c08ebecd" label="Medical Triage Observations.Using Accessory muscles of respiration No observation code" triso:allowNull="true">
+                <semantic:inputExpression typeRef="tPresentAbsent">
+                    <semantic:text>Medical Triage Observations.Using Accessory muscles of respiration No observation code</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"52101004 |Present (qualifier value)|","2667000 |Absent (qualifier value)|",null</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:input id="_1fe48ffb-2ef9-4b3b-9dca-2f4219353007" label="Medical Triage Observations.Bluish lips/fingers 364131009 Color of lip observable entity 364533002 Color of skin observable entity 7569003 Finger structure body structure" triso:allowNull="true">
+                <semantic:inputExpression typeRef="tPresentAbsent">
+                    <semantic:text>Medical Triage Observations.Bluish lips/fingers 364131009 Color of lip observable entity 364533002 Color of skin observable entity 7569003 Finger structure body structure</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"52101004 |Present (qualifier value)|","2667000 |Absent (qualifier value)|",null</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:input id="_43ff24ea-6033-4169-8542-a57665667876" label="Medical Triage Observations.Chest Pressure/Tightness/Pain 364624006 Pain / sensation observable observable entity 302551006 Entire thorax body structure" triso:allowNull="true">
+                <semantic:inputExpression typeRef="tPresentAbsent">
+                    <semantic:text>Medical Triage Observations.Chest Pressure/Tightness/Pain 364624006 Pain / sensation observable observable entity 302551006 Entire thorax body structure</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"52101004 |Present (qualifier value)|","2667000 |Absent (qualifier value)|",null</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:input id="_4aac0490-a171-468b-8905-1faa32d518de" label="Medical Triage Observations.Unilateral Weakness 271909001 Neurology examination finding observable entity" triso:allowNull="true">
+                <semantic:inputExpression typeRef="tPresentAbsent">
+                    <semantic:text>Medical Triage Observations.Unilateral Weakness 271909001 Neurology examination finding observable entity</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"52101004 |Present (qualifier value)|","2667000 |Absent (qualifier value)|",null</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:input id="_c4e04550-06ac-49ec-a677-f2858117e862" label="Medical Triage Observations.Other Severe clinical condition 74964007 Other qualifier value 24484000 Severe severity modifier qualifier value 363788007 Clinical history/examination observable observable entity" triso:allowNull="true">
+                <semantic:inputExpression typeRef="tPresentAbsent">
+                    <semantic:text>Medical Triage Observations.Other Severe clinical condition 74964007 Other qualifier value 24484000 Severe severity modifier qualifier value 363788007 Clinical history/examination observable observable entity</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"52101004 |Present (qualifier value)|","2667000 |Absent (qualifier value)|",null</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:input id="_6992f7a7-3ab7-4be6-9e85-89ef81ff673e" label="Medical Triage Observations.Pneumonia LP90009-9 Pneumonia in last 7 days" triso:allowNull="true">
+                <semantic:inputExpression typeRef="tPresentAbsent">
+                    <semantic:text>Medical Triage Observations.Pneumonia LP90009-9 Pneumonia in last 7 days</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"52101004 |Present (qualifier value)|","2667000 |Absent (qualifier value)|",null</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:input id="_0c61599b-2ac7-42b0-986b-802d8ea6facf" label="Medical Triage Observations.Bronchitis No observation code" triso:allowNull="true">
+                <semantic:inputExpression typeRef="tPresentAbsent">
+                    <semantic:text>Medical Triage Observations.Bronchitis No observation code</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"52101004 |Present (qualifier value)|","2667000 |Absent (qualifier value)|",null</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:input id="_370c1afe-d044-4eda-817b-05dbe09125bb" label="Medical Triage Observations.Dehydration 405006006 Hydration status observable entity" triso:allowNull="true">
+                <semantic:inputExpression typeRef="tPresentAbsent">
+                    <semantic:text>Medical Triage Observations.Dehydration 405006006 Hydration status observable entity</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"52101004 |Present (qualifier value)|","2667000 |Absent (qualifier value)|",null</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:input id="_f6b40586-7e76-4e39-b3d3-6fd7b7e0464f" label="Medical Triage Observations.Other Moderate clinical condition 74964007 Other qualifier value 6736007 Moderate severity modifier qualifier value 363788007 Clinical history/examination observable observable entity" triso:allowNull="true">
+                <semantic:inputExpression typeRef="tPresentAbsent">
+                    <semantic:text>Medical Triage Observations.Other Moderate clinical condition 74964007 Other qualifier value 6736007 Moderate severity modifier qualifier value 363788007 Clinical history/examination observable observable entity</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"52101004 |Present (qualifier value)|","2667000 |Absent (qualifier value)|",null</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:input id="_c56d60da-2130-437b-a6ba-b111574c2d24" label="Medical Triage Observations.Mild clinical condition 255604002 Mild qualifier value 363788007 Clinical history/examination observable observable entity" triso:allowNull="true">
+                <semantic:inputExpression typeRef="tPresentAbsent">
+                    <semantic:text>Medical Triage Observations.Mild clinical condition 255604002 Mild qualifier value 363788007 Clinical history/examination observable observable entity</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"52101004 |Present (qualifier value)|","2667000 |Absent (qualifier value)|",null</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:output id="_844f5649-51df-464b-aa9c-cea6d3391ecc" triso:allowNull="true">
+                <semantic:outputValues triso:constraintsType="enumeration">
+                    <semantic:text>"24484000 |Severe","6736007 |Moderate","255604002 |Mild","84387000 |Asymptomatic (finding)|","Error",null</semantic:text>
+                </semantic:outputValues>
+            </semantic:output>
+            <semantic:annotation name="Description" />
+            <semantic:rule id="_f2aed8e7-f339-44a1-b619-222d3eff2bea">
+                <semantic:inputEntry id="_82b4a996-d829-4ec2-be63-8e131d0edc31">
+                    <semantic:text>"52101004 |Present (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_5b07b325-bfeb-4bf4-ab42-1b2502e22c1a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_fa83737a-ae2f-47a8-aa8e-d74544cd35a7">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_42ed1fd4-e334-4a3f-84a5-05b337934e71">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_7809f063-2128-439f-b3d3-6f87ddb03e6e">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_c5f255e9-57de-40f3-948f-c9413e423ca2">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_8242e12c-ea27-49ed-9a23-d5b52d5c2a47">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_f2217c1a-7714-46a9-8f4b-c0e078d146e1">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_b19f1822-d365-4e98-9208-b2b3890cc477">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_abfc6ff6-a978-4247-b95d-a1a1e8e8a286">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_cb0987a8-5745-4dd4-a134-388f6498fb8f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_3b466ae0-73b3-42b1-95be-6dac753ba85b">
+                    <semantic:text>"24484000 |Severe"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text />
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_f934ec4f-ae23-4aec-b524-2ba88fdee3b3">
+                <semantic:inputEntry id="_288ac41f-a739-4adc-8a5b-86c73e99c03f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_8734c3b5-fab7-4ade-851f-48dea4b8ea36">
+                    <semantic:text>"52101004 |Present (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_2fa9c259-a007-4394-a8d9-24a7afcff6fa">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_d5a784cd-cf5f-445d-a9d6-c03cd1b6cdc9">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_29044a08-fb22-4b17-a286-a5839b6a1f49">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_b55e02ea-096c-48f9-bae1-699ddf391bd8">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_f99f4447-6944-4262-ab7f-c42523a4b289">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_4c2cee5b-eeac-4423-be3e-06c2af440f9b">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_261e7864-3b22-4e3c-97d3-202570862b65">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_854b6297-86aa-453d-a390-e05d943f14da">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_bf701715-8061-4e24-8f9a-73ac91b7d466">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_5058fa35-ce2f-45ce-beea-0828a4337f6a">
+                    <semantic:text>"24484000 |Severe"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text />
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_6f1f4a19-b9a0-462f-9e73-f98d5e3d1285">
+                <semantic:inputEntry id="_3fb524e0-fd1e-4489-a8a5-0acb9c4e1d2d">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_edb5fed1-e01f-4972-b109-1a186eedd2dc">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_7fc0bffb-b127-4ff7-9a75-29ef7e23014a">
+                    <semantic:text>"52101004 |Present (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_fadd393f-b416-4d75-8ae8-65819d96228f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_7b866718-bbc8-4d67-baf6-f233cb824f74">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_117a0f7c-7024-41db-a123-df5dbf30e4f4">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_4c8b19cc-c1ac-41fd-b61c-91ce03b5b6eb">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_f156e96b-06c7-46e5-95c2-7401535aa64a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_d04726ac-5a6b-4041-9df1-84aa4de3c354">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_0986be2c-e9d6-47f5-9e86-833930e05ecf">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_a44616ee-b54c-4ba6-983c-7d459f42c1e6">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_63283f90-f8fb-49a2-b687-e99c19ca4834">
+                    <semantic:text>"24484000 |Severe"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text />
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_65aaaae8-7186-4838-add1-d94e7df71361">
+                <semantic:inputEntry id="_38602104-838c-4eaa-82b9-e62aba4fcfa9">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_758fe722-3aff-4caf-b842-ee6abfa6fd6a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_bd46f5f0-36bd-4478-b475-0311d9db5ae1">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_8a6016cc-5353-4e39-9eff-2b093d999e94">
+                    <semantic:text>"52101004 |Present (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_a73dcfdf-d622-4a79-8b77-9711e19f9c08">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_4bdd44c5-ce7d-48d3-a3eb-3442fbc3862f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_e8161697-b8d3-49c6-ba8a-55e07d77effc">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_cf6ba1fc-b999-4fac-b54d-e1a8e96a9dc8">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_e665d889-1a9c-4a86-b4f1-99e49ab1084f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_73c02faa-6667-4a8b-ab7d-db437bcac604">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_c28b0051-d8b4-4e82-abed-2283b3153359">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_6986b347-f88b-4718-a5aa-97a523f611e6">
+                    <semantic:text>"24484000 |Severe"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text />
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_a34e97cf-2df4-47f0-969f-114c71f30478">
+                <semantic:inputEntry id="_072b8e79-03ed-4e6d-9e35-370cc070c4a7">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_bf3117f4-2448-4ec2-97c1-3bae79bb5449">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_13bdd8e0-8aa0-4f38-aa26-39d3be6799d9">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_8dca21c6-98e0-4f8e-ac44-b46d8ea36305">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_970af650-86af-4494-8d98-93dddb7d8d34">
+                    <semantic:text>"52101004 |Present (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_40091f25-6e37-473c-b692-4f1755ca1d10">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_4d4ae0a0-7917-48ca-8f5c-d645e5171be4">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_b307325a-6977-49dd-a926-8f39a75a8d49">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_30837bce-5bf4-4403-99bd-e84377ae0ade">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_c192e325-254a-4f22-8a40-f137fcc1fb4e">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_b997bb63-41d5-42ac-b902-900a3f9bcba5">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_49dc5397-e901-470e-a1b7-e3ad19614630">
+                    <semantic:text>"24484000 |Severe"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text />
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_273fdab8-106f-4913-afa1-c45aa2885b6a">
+                <semantic:inputEntry id="_e29b1aa0-191f-48db-9018-b6e964e19d61">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_75e43439-3dee-45bc-81bc-a94e72169f48">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_0e395f16-cf02-4c03-8415-67d0b14d024f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_8b165067-4cc8-4658-8cc8-00c0dc2cd20c">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_32a08d50-847f-4fc7-9125-152f7c753ce7">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_6a7b4222-ba21-4efd-9575-ca3ca3404482">
+                    <semantic:text>"52101004 |Present (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_a3ea311d-5e62-4e85-8c89-b3f03412992f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_d2d77d35-f677-42de-92da-c492cc81b049">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_f398ea67-b0e9-4a45-a3a8-cb5f2e768e08">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_97cc31a4-546c-4ddd-abce-cbb8a8d9d629">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_24a15c4b-6198-4fd2-8f6c-17bccf834b00">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_56b861e7-e967-4941-9bb0-10257aa8590b">
+                    <semantic:text>"24484000 |Severe"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text />
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_f0b9426b-5da0-46fe-883e-04892ff84bca">
+                <semantic:inputEntry id="_fdb3fef3-5e75-4228-ab7c-4fbb54acf216">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_1a317cac-28a6-4b87-a1a1-c19be6595081">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_7e4d14c7-fbff-4018-8488-567e68655226">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_3b89efa0-8ac5-49b1-8d84-858bbd1e1fbe">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_0c763b5a-14ac-485b-8e3a-b69ea67c8de8">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_f14628f5-cebd-4895-b327-653ea25400a5">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_92cb5b51-0a67-4d13-8ed8-761369f1e413">
+                    <semantic:text>"52101004 |Present (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_dfb80e31-c4fd-4251-b549-7cb21756a8b0">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_33f0c639-00b8-4007-aba6-6b88f9c32d07">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_ca603d85-f01b-4c0f-b71c-c347b3f7c41f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_f4de3893-bc20-455d-8948-447410c0a466">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_b23c221c-63c5-4f0b-ac49-f4d836eed914">
+                    <semantic:text>"6736007 |Moderate"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text />
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_afd87c5a-ab6b-48cb-bd2e-fc653dcc9cbe">
+                <semantic:inputEntry id="_835a5aa4-9298-44e3-9ab8-03d79e6a0f41">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_941cc88f-9c83-4157-a7e1-63fe10f04994">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_4962d4fd-061e-440e-b8ad-b2ba63ed3d6a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_da2d6733-8f2f-4a34-8453-1a87137689fa">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_54b6fc34-10ca-48e2-b277-1f6b197df2c4">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_fc6b13c1-ef09-41db-8f11-d39abd85944c">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_77efb521-2349-4bea-b670-03fcfd3df49d">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_0e1f59fe-a4f1-4114-b3f1-20338eb33f1c">
+                    <semantic:text>"52101004 |Present (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_f7c6a78e-aeea-4c14-a108-81c1fb6f8118">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_330f64f9-b4e4-42ad-8915-49ef8715d530">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_f80e6a67-a086-4032-9733-96b1e89549c3">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_b95bfbc1-7ad6-43c7-a449-0f3c0f7bd74a">
+                    <semantic:text>"6736007 |Moderate"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text />
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_54f5e62d-84f3-400c-b701-5ff764945db3">
+                <semantic:inputEntry id="_18ecfd05-f5a1-4340-bea7-1eb596018b47">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_07dfef95-30ac-4e77-845d-f13dd8ce94d8">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_6a611886-146b-4706-bfc4-7be5144fc41d">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_23e7e47c-3858-4b1e-9e1b-a08782872544">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_5af6afb9-fc4d-48b2-8ac0-58d5483a6e3f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_04750d02-67c3-440e-9c47-473dc694a41a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_2b9b5dcd-0188-499b-b6bd-edb806d4ceeb">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_ce78b356-2556-4da1-b3d5-6c3b611b35f5">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_e023ef8a-ac95-40b3-b62e-cbaa8825f04f">
+                    <semantic:text>"52101004 |Present (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_23f16c9b-249d-4a6e-b370-56d2c6a83cfd">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_16802a28-59f7-42ef-8570-b763c2d6c60f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_f8e1e97c-9fc3-43cf-a85a-e4ede0cb3b05">
+                    <semantic:text>"6736007 |Moderate"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text />
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_252b568e-040d-4f03-a107-c5807fcb1098">
+                <semantic:inputEntry id="_d78c05d2-df19-4323-b626-ea2a8f8a674d">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_06837272-52ca-4ef7-a3f0-4bedb2b3001e">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_17144562-a359-4a5e-a555-b2167d47d75f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_de1863e9-26bb-4431-9661-f06eefe17f9f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_7c285c95-368e-4581-8b61-d2891f315f4a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_88da9a69-c41e-4758-9d27-dcf5761516f1">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_4db2462b-fae1-453e-9a6c-03d2c0952e57">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_3f9efebb-7667-48ae-bf0a-ecbb51a3cd2b">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_3af0c0c7-5de0-40c2-8159-37cfb2d19d00">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_1b67143a-bdc6-4bc4-9532-8c85f979d5f1">
+                    <semantic:text>"52101004 |Present (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_b3780a92-f8aa-4cb1-90aa-ce91b70b352b">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_00b45f5f-5f30-4e6a-a29b-65b0e85d725e">
+                    <semantic:text>"6736007 |Moderate"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text />
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_e350459b-3e5a-4848-b8a3-25ae6279d5c0">
+                <semantic:inputEntry id="_16016b6e-f9bc-444d-84d2-92bf21e0143a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_3896fe3a-0563-4cc7-b54c-05b3870789b2">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_29157642-0e90-43d9-abd0-ddc668a33fe4">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_e233cd5b-ec4d-4171-bfb1-f177c4712572">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_93cbb6d8-7827-48b1-9edd-65f4ed8f956a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_a5601dbb-2274-41a0-b08f-e5035f53fa57">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_724c1cb6-c71f-45ce-8b3d-049910ec8eda">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_6530d780-a3cd-4238-843b-2aee83873956">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_29ae3cfa-c010-4efc-9fae-8026aaa63f1a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_3a42f972-7ae4-4b3f-88df-3167834a62a6">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_51c4d916-f12f-404f-a4ea-61ed340a42d7">
+                    <semantic:text>"52101004 |Present (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_efa950e2-6f12-4133-a415-01f6fa76936f">
+                    <semantic:text>"255604002 |Mild"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text />
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_08ed810a-fad7-4206-a727-b788d986d24d">
+                <semantic:inputEntry id="_ccbb1256-30cb-4a12-99d2-3c14be76b881">
+                    <semantic:text>"2667000 |Absent (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_baa8c596-76f5-4c62-a4e9-ccc0dd940cca">
+                    <semantic:text>"2667000 |Absent (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_de0376df-dd80-4a5d-99bb-2e541f73f188">
+                    <semantic:text>"2667000 |Absent (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_9f4e2723-6731-444e-b8b6-546ed4ed1eff">
+                    <semantic:text>"2667000 |Absent (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_c5352ba3-284e-4c92-b800-50532fa02c21">
+                    <semantic:text>"2667000 |Absent (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_c7a323a8-b395-4d67-b47a-9a2c8c23324c">
+                    <semantic:text>"2667000 |Absent (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_c09e09e7-7bd3-4b3d-95fa-3101c7c04c0c">
+                    <semantic:text>"2667000 |Absent (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_1a09cece-91e3-4229-8b38-37d475901e4d">
+                    <semantic:text>"2667000 |Absent (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_557aeaad-6197-48ed-bc3f-f6ed185348d5">
+                    <semantic:text>"2667000 |Absent (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_8243be7c-fc87-4a14-bc43-86b68667a1e5">
+                    <semantic:text>"2667000 |Absent (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_9f7688ea-4761-4587-96fe-4cafa764677f">
+                    <semantic:text>"2667000 |Absent (qualifier value)|"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_c079fb1a-c2f4-4fc8-9091-eb734c9973a9">
+                    <semantic:text>"84387000 |Asymptomatic (finding)|"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text />
+                </semantic:annotationEntry>
+            </semantic:rule>
+        </semantic:decisionTable>
+    </semantic:decision>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram name="Page 1" id="_00bc24d1-d08c-4d16-b1b0-1c4690c0fcb8" triso:modelElementRef="_11dc1a1b-898d-494d-805a-515f2d1cbe63">
+            <di:extension />
+            <dmndi:Size height="1050" width="1485" />
+            <dmndi:DMNShape id="_5c7d37aa-bc4e-4c98-8c58-aa6ed296b341" dmnElementRef="_6c7754be-a4e3-4aab-b6b7-81ba7c8ad22b">
+                <dc:Bounds y="222" x="169.29826593399048" height="60" width="135" />
+                <dmndi:DMNLabel sharedStyle="LS_18543874-08b0-4c9d-ba2f-8d59b58b3384_0" trisodmn:defaultBounds="true" />
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_dabb3364-5e84-467c-8dd0-eeaf53312f13" dmnElementRef="_62e5163b-f769-4ecc-bdaf-a534ad0f439a">
+                <dc:Bounds y="107" x="160.29826593399048" height="60" width="153" />
+                <dmndi:DMNLabel sharedStyle="LS_18543874-08b0-4c9d-ba2f-8d59b58b3384_0" trisodmn:defaultBounds="true" />
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="_68412000-4fbd-4a3a-953d-a509f0668394" dmnElementRef="_2b6ef027-6947-4292-945b-0f2f7ccd498d" sourceElement="_5c7d37aa-bc4e-4c98-8c58-aa6ed296b341" targetElement="_dabb3364-5e84-467c-8dd0-eeaf53312f13">
+                <di:waypoint y="222" x="236.7924216413664" />
+                <di:waypoint y="167" x="236.79826593399048" />
+                <dmndi:DMNLabel sharedStyle="LS_18543874-08b0-4c9d-ba2f-8d59b58b3384_0" />
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+        <dmndi:DMNStyle id="LS_18543874-08b0-4c9d-ba2f-8d59b58b3384_0" fontFamily="arial,helvetica,sans-serif" fontSize="11" fontBold="false" fontItalic="false" fontUnderline="false" fontStrikeThrough="false" />
+    </dmndi:DMNDI>
+</semantic:definitions>
