@@ -4,4 +4,4 @@ This directory contains all of the knowledge artifacts needed to successfully ca
 
 Below are the questions:
 
-+ **Complex Blood Pressure**
++ [**Complex Blood Pressure**](https://github.com/logicahealth/Solor-BPM/tree/master/In-Person%20Pre-Arrival/sdc/complex-blood-pressure)
