@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire xmlns="http://hl7.org/fhir">
+    <id value="12345"/>
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <pre>---------------------------------
+                Systolic Blood Pressure 120 mmHg, 
+                Taken on Right Brachial Artery, 
+                Diastolic Blood Pressure 75 mmHG,
+                Taken on Right Brachial Artery
+                ---------------------------------
+
+                1. Blood Pressure Measurements:
+                    1.1 Systolic: 120 mm[Hg]
+                        1.1.1 Procedure Site: Structure of right brachial artery (body structure)
+                    1.2 Diastolic: 75 mm[Hg]
+                        1.2.1 Procedure Site: Structure of right brachial artery (body structure)
+            </pre>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/Questionnaire/12345"/>
+    <title value="Complex Blood Pressure Questionnaire"/>
+    <status value="draft"/>
+    <subjectType value="Patient"/>
+    <date value="2020-07-22"/>
+    <contained>
+        <ValueSet>
+            <id value="a773d2b4-cb02-4eff-ad1f-6043c36cb0c9"/>
+            <name value="Blood Pressure Procedure Site"/>
+            <status value="active"/>
+            <compose>
+                <include>
+                    <system value="http://snomed.info/sct"/>
+                    <concept>
+                        <code value="723962009"/>
+                        <display value="Structure of right brachial artery (body structure)"/>
+                    </concept>
+                    <concept>
+                        <code value="723961002"/>
+                        <display value="Structure of left brachial artery (body structure)"/>
+                    </concept>
+                </include>
+            </compose>
+        </ValueSet>
+    </contained>
+    <item>
+        <linkId value="e62be151-86f0-49cd-ab05-0a9badbea800"/>
+        <code>
+            <system value="http://snomed.info/sct"/>
+            <code value="75367002"/>
+            <display value="Blood pressure (observable entity)"/>
+        </code>
+        <prefix value="1.0"/>
+        <text value="Blood Pressure Measurement"/>
+        <type value="group"/>
+        <item>
+            <linkId value="08bdd3d0-ba68-4589-afad-b11dd2445c47"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="271649006"/>
+                <display value="Systolic blood pressure (observable entity)"/>
+            </code>
+            <prefix value="1.1"/>
+            <text value="Systolic Blood Pressure"/>
+            <type value="integer"/>
+            <item>
+                <linkId value="fb5166c2-3d21-41c9-b0db-a51710d7886e"/>
+                <code>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="363704007"/>
+                    <display value="Procedure site (attribute)"/>
+                </code>
+                <prefix value="1.1.1"/>
+                <text value="Procedure site"/>
+                <type value="choice"/>
+                <answerValueSet value="#a773d2b4-cb02-4eff-ad1f-6043c36cb0c9"/>
+            </item>
+        </item>
+        <item>
+            <linkId value="5772af68-dcdb-4cc1-b4cc-00dd396c245b"/>
+            <code>
+                <system value="http://snomed.info/sct"/>
+                <code value="271650006"/>
+                <display value="Diastolic blood pressure (observable entity)"/>
+            </code>
+            <prefix value="1.2"/>
+            <text value="Diastolic Blood Pressure"/>
+            <type value="integer"/>
+            <item>
+                <linkId value="47b5f243-a118-45c4-b366-45f480f32db1"/>
+                <code>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="363704007"/>
+                    <display value="Procedure site (attribute)"/>
+                </code>
+                <prefix value="1.2.1"/>
+                <text value="Procedure site"/>
+                <type value="choice"/>
+                <answerValueSet value="#a773d2b4-cb02-4eff-ad1f-6043c36cb0c9"/>
+            </item>
+        </item>
+    </item>
+</Questionnaire>

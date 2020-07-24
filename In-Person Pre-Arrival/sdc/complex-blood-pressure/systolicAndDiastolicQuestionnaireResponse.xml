@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+    <id value="3141"/>
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <pre>---------------------------------
+                Systolic Blood Pressure 120 mmHg, 
+                Taken on Right Brachial Artery, 
+                Diastolic Blood Pressure 75 mmHG,
+                Taken on Right Brachial Artery
+                ---------------------------------
+
+                1. Blood Pressure Measurements:
+                    1.1 Systolic: 120 mm[Hg]
+                        1.1.1 Procedure Site: Structure of right brachial artery (body structure)
+                    1.2 Diastolic: 75 mm[Hg]
+                        1.2.1 Procedure Site: Structure of right brachial artery (body structure)
+          </pre>
+        </div>
+    </text>
+    <identifier>
+        <value value="d41198f3-15f6-4274-8ef9-344580a01070"/>
+    </identifier>
+    <status value="completed"/>
+    <item>
+        <linkId value="e62be151-86f0-49cd-ab05-0a9badbea800"/>
+        <item>
+            <linkId value="08bdd3d0-ba68-4589-afad-b11dd2445c47"/>
+            <answer>
+                <valueInteger value="120"/>
+            </answer>
+            <item>
+                <linkId value="fb5166c2-3d21-41c9-b0db-a51710d7886e"/>
+                <answer>
+                    <valueCoding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="723962009"/>
+                        <display value="Structure of right brachial artery (body structure)"/>
+                    </valueCoding>
+                </answer>
+            </item>
+        </item>
+        <item>
+            <linkId value="5772af68-dcdb-4cc1-b4cc-00dd396c245b"/>
+            <answer>
+                <valueInteger value="75"/>
+            </answer>
+            <item>
+                <linkId value="47b5f243-a118-45c4-b366-45f480f32db1"/>
+                <answer>
+                    <valueCoding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="723962009"/>
+                        <display value="Structure of right brachial artery (body structure)"/>
+                    </valueCoding>
+                </answer>
+            </item>
+        </item>
+    </item>
+</QuestionnaireResponse>
