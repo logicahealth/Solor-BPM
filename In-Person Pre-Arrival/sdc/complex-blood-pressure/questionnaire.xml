@@ -68,8 +68,8 @@
                 <linkId value="fb5166c2-3d21-41c9-b0db-a51710d7886e"/>
                 <code>
                     <system value="http://snomed.info/sct"/>
-                    <code value="363704007"/>
-                    <display value="Procedure site (attribute)"/>
+                    <code value="405813007"/>
+                    <display value="Procedure site - Direct (attribute)"/>
                 </code>
                 <prefix value="1.1.1"/>
                 <text value="Procedure site"/>
@@ -91,8 +91,8 @@
                 <linkId value="47b5f243-a118-45c4-b366-45f480f32db1"/>
                 <code>
                     <system value="http://snomed.info/sct"/>
-                    <code value="363704007"/>
-                    <display value="Procedure site (attribute)"/>
+                    <code value="405813007"/>
+                    <display value="Procedure site - Direct (attribute)"/>
                 </code>
                 <prefix value="1.2.1"/>
                 <text value="Procedure site"/>
