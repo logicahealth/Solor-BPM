@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<anf>
+   <statement>
+      <topic>271649006|Systolic blood pressure (observable entity)|:363704007|Procedure site (attribute)|=723962009|Structure of right brachial artery (body structure)|</topic>
+      <circumstance type="performance">
+         <status>completed</status>
+         <result>[120,120]</result>
+      </circumstance>
+   </statement>
+   <statement>
+      <topic>271650006|Diastolic blood pressure (observable entity)|:363704007|Procedure site (attribute)|=723962009|Structure of right brachial artery (body structure)|</topic>
+      <circumstance type="performance">
+         <status>completed</status>
+         <result>[75,75]</result>
+      </circumstance>
+   </statement>
+</anf>

@@ -4,26 +4,18 @@
     <text>
         <status value="generated"/>
         <div xmlns="http://www.w3.org/1999/xhtml">
-            <pre>
-                ---------------------------------
+            <pre>---------------------------------
                 Systolic Blood Pressure 120 mmHg, 
                 Taken on Right Brachial Artery, 
-                Using BP Cuff Adult Size, Patient in Sitting Position for at Least 5 Minutes, 
-                Urinated Not More Than 30 Minutes Prior to Measurement
+                Diastolic Blood Pressure 75 mmHG,
+                Taken on Right Brachial Artery
                 ---------------------------------
 
                 1. Blood Pressure Measurements:
                     1.1 Systolic: 120 mm[Hg]
+                        1.1.1 Procedure Site: Structure of right brachial artery (body structure)
                     1.2 Diastolic: 75 mm[Hg]
-                2. Blood Pressure Measurement Details:
-                    2.1 Cuff Size: Adult Cuff
-                    2.2 Patient Position: Sitting 
-                        2.2.1 Duration of Position (minutes): 5 minutes
-                    2.3 Cuff Location: Brachial Artery
-                        2.3.1 Cuff Laterality: Left side
-                    2.4 Micturition: true
-                        2.4.1 Duration prior to Measurement: 30 minutes
-                3. Interpretation: Hypertensive Disorder
+                        1.2.1 Procedure Site: Structure of right brachial artery (body structure)
             </pre>
         </div>
     </text>
@@ -34,74 +26,19 @@
     <date value="2020-07-22"/>
     <contained>
         <ValueSet>
-            <id value="2a86ac45-8383-488a-a3ba-d83e69f01189"/>
-            <name value="Blood Pressure Cuff Size ValueSet"/>
+            <id value="a773d2b4-cb02-4eff-ad1f-6043c36cb0c9"/>
+            <name value="Blood Pressure Procedure Site"/>
             <status value="active"/>
             <compose>
                 <include>
                     <system value="http://snomed.info/sct"/>
                     <concept>
-                        <code value="720738005"/>
-                        <display value="Blood pressure cuff, adult size large (physical object)"/>
+                        <code value="723962009"/>
+                        <display value="Structure of right brachial artery (body structure)"/>
                     </concept>
                     <concept>
-                        <code value="720739002"/>
-                        <display value="Blood pressure cuff, adult size small (physical object)"/>
-                    </concept>
-                    <concept>
-                        <code value="720740000"/>
-                        <display value="Blood pressure cuff, adult thigh type (physical object)"/>
-                    </concept>
-                    <concept>
-                        <code value="720736009"/>
-                        <display value="Blood pressure cuff, pediatric size (physical object)"/>
-                    </concept>
-                    <concept>
-                        <code value="720737000"/>
-                        <display value="Blood pressure cuff, adult size"/>
-                    </concept>
-                </include>
-                <exclude>
-                    <system value="http://snomed.info/sct"/>
-                    <concept>
-                        <code value="466806008"/>
-                        <display value="Blood pressure cuff, reusable (physical object)"/>
-                    </concept>
-                    <concept>
-                        <code value="466802005"/>
-                        <display value="Blood pressure cuff, single-use (physical object)"/>
-                    </concept>
-                </exclude>
-            </compose>
-        </ValueSet>
-    </contained>
-    <contained>
-        <ValueSet>
-            <id value="4d9a69f5-7a09-4f19-908b-abaed3352154"/>
-            <name value="American Heart Association Blood Pressure Diagnosis ValueSet"/>
-            <status value="active"/>
-            <compose>
-                <include>
-                    <system value="http://snomed.info/sct"/>
-                    <concept>
-                        <code value="2004005"/>
-                        <display value="Normal blood pressure (finding)"/>
-                    </concept>
-                    <concept>
-                        <code value="24184005"/>
-                        <display value="Finding of increased blood pressure (finding)"/>
-                    </concept>
-                    <concept>
-                        <code value="827069000"/>
-                        <display value="Stage 1 hypertension (finding)"/>
-                    </concept>
-                    <concept>
-                        <code value="827068008"/>
-                        <display value="Stage 2 hypertension (finding)"/>
-                    </concept>
-                    <concept>
-                        <code value="706882009"/>
-                        <display value=" Hypertensive crisis (disorder)e"/>
+                        <code value="723961002"/>
+                        <display value="Structure of left brachial artery (body structure)"/>
                     </concept>
                 </include>
             </compose>
@@ -127,6 +64,18 @@
             <prefix value="1.1"/>
             <text value="Systolic Blood Pressure"/>
             <type value="integer"/>
+            <item>
+                <linkId value="fb5166c2-3d21-41c9-b0db-a51710d7886e"/>
+                <code>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="363704007"/>
+                    <display value="Procedure site (attribute)"/>
+                </code>
+                <prefix value="1.1.1"/>
+                <text value="Procedure site"/>
+                <type value="choice"/>
+                <answerValueSet value="#a773d2b4-cb02-4eff-ad1f-6043c36cb0c9"/>
+            </item>
         </item>
         <item>
             <linkId value="5772af68-dcdb-4cc1-b4cc-00dd396c245b"/>
@@ -138,131 +87,18 @@
             <prefix value="1.2"/>
             <text value="Diastolic Blood Pressure"/>
             <type value="integer"/>
-        </item>
-    </item>
-    <item>
-        <linkId value="70362967-4d2e-4353-952a-36eb258cdb38"/>
-        <code>
-            <system value="http://snomed.info/sct"/>
-            <code value="75367002"/>
-            <display value="Blood pressure (observable entity)"/>
-        </code>
-        <prefix value="2.0"/>
-        <text value="Blood Pressure Measurement Details"/>
-        <type value="group"/>
-        <item>
-            <linkId value="afaee033-6ca4-496f-a613-ade246a88ed3"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="722471002"/>
-                <display value="Size of blood pressure cuff (observable entity)"/>
-            </code>
-            <prefix value="2.1"/>
-            <text value="Cuff Size"/>
-            <type value="choice"/>
-            <answerValueSet value="#2a86ac45-8383-488a-a3ba-d83e69f01189"/>
-        </item>
-        <item>
-            <linkId value="7ec135f3-ca89-4703-9e5d-bb8cc059c8a0"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="229824005"/>
-                <display value="Positioning patient (procedure)"/>
-            </code>
-            <prefix value="2.2"/>
-            <text value="Patient Position"/>
-            <type value="choice"/>
-            <answerValueSet value="http://hl7.org/fhir/us/qicore/ValueSet/qicore-observation-body-position"/>
             <item>
-                <linkId value="87026002-5a86-4095-a775-8fd5d338d13a"/>
+                <linkId value="47b5f243-a118-45c4-b366-45f480f32db1"/>
                 <code>
                     <system value="http://snomed.info/sct"/>
-                    <code value="272116003"/>
-                    <display value="Durations (qualifier value)"/>
+                    <code value="363704007"/>
+                    <display value="Procedure site (attribute)"/>
                 </code>
-                <code>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="258701004"/>
-                    <display value="min (qualifier value)"/>
-                </code>
-                <prefix value="2.2.1"/>
-                <text value="Duration of Position (minutes)"/>
-                <type value="integer"/>
-            </item>
-        </item>
-        <item>
-            <linkId value="47b5f243-a118-45c4-b366-45f480f32db1"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="70665002"/>
-                <display value="Blood pressure cuff, device (physical object)"/>
-            </code>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="246267002"/>
-                <display value="Location (attribute)"/>
-            </code>
-            <prefix value="2.3"/>
-            <text value="Cuff Location"/>
-            <type value="choice"/>
-            <answerValueSet value="http://hl7.org/fhir/ValueSet/body-site"/>
-            <item>
-                <linkId value="49ed6346-358f-4add-8c5b-69ef701ad513"/>
-                <code>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="70665002"/>
-                    <display value="Blood pressure cuff, device (physical object)"/>
-                </code>
-                <code>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="272741003"/>
-                    <display value="Laterality (attribute)"/>
-                </code>
-                <prefix value="2.3.1"/>
-                <text value="Cuff Laterality"/>
+                <prefix value="1.2.1"/>
+                <text value="Procedure site"/>
                 <type value="choice"/>
-                <answerValueSet value="http://hl7.org/fhir/ValueSet/bodysite-laterality"/>
+                <answerValueSet value="#a773d2b4-cb02-4eff-ad1f-6043c36cb0c9"/>
             </item>
         </item>
-        <item>
-            <linkId value="a4e9a46c-6f28-4b26-a95b-13e7487a066d"/>
-            <code>
-                <system value="http://snomed.info/sct"/>
-                <code value="252041008"/>
-                <display value="Micturition finding (finding)"/>
-            </code>
-            <prefix value="2.4"/>
-            <text value="Micturition"/>
-            <type value="choice"/>
-            <answerValueSet value="http://hl7.org/fhir/ValueSet/yesnodontknow"/>
-            <item>
-                <linkId value="7d764d1c-4020-4bf7-bf08-b3245b5ef3ce"/>
-                <code>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="251411003"/>
-                    <display value="Time since previous micturition (observable entity)"/>
-                </code>
-                <code>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="258701004"/>
-                    <display value="min (qualifier value)"/>
-                </code>
-                <prefix value="2.4.1"/>
-                <text value="Duration prior to Blood Pressure Measurement (minutes)"/>
-                <type value="integer"/>
-            </item>
-        </item>
-    </item>
-    <item>
-        <linkId value="4062f291-11e3-4c2b-9438-d82e6012a1d5"/>
-        <code>
-            <system value="http://snomed.info/sct"/>
-            <code value="243814003"/>
-            <display value="Interpretation of findings (observable entity)"/>
-        </code>
-        <prefix value="3.0"/>
-        <text value="Interpretation"/>
-        <type value="choice"/>
-        <answerValueSet value="#4d9a69f5-7a09-4f19-908b-abaed3352154"/>
     </item>
 </Questionnaire>
