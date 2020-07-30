@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QuestionnaireResponse xmlns="http://hl7.org/fhir">
     <id value="3141"/>
-    <text>
-        <status value="generated"/>
-        <div xmlns="http://www.w3.org/1999/xhtml">
-            <pre>---------------------------------
-                Systolic Blood Pressure 120 mmHg, 
-                Taken on Right Brachial Artery, 
-                Diastolic Blood Pressure 75 mmHG,
-                Taken on Right Brachial Artery
-                ---------------------------------
-
-                1. Blood Pressure Measurements:
-                    1.1 Systolic: 120 mm[Hg]
-                        1.1.1 Procedure Site: Structure of right brachial artery (body structure)
-                    1.2 Diastolic: 75 mm[Hg]
-                        1.2.1 Procedure Site: Structure of right brachial artery (body structure)
-          </pre>
-        </div>
-    </text>
     <identifier>
         <value value="d41198f3-15f6-4274-8ef9-344580a01070"/>
     </identifier>
@@ -36,7 +18,7 @@
                     <valueCoding>
                         <system value="http://snomed.info/sct"/>
                         <code value="723962009"/>
-                        <display value="Structure of right brachial artery (body structure)"/>
+                        <display value="Structure of right brachial  artery (body structure)"/>
                     </valueCoding>
                 </answer>
             </item>
