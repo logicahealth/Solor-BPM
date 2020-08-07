@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="3.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xpath-default-namespace="http://hl7.org/fhir">
+<xsl:stylesheet version="3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xpath-default-namespace="http://hl7.org/fhir">
     <xsl:output indent="true" method="xml" omit-xml-declaration="no"/>
     <xsl:variable name="pipe">|</xsl:variable>
     <xsl:variable name="bracketOpen">[</xsl:variable>
@@ -23,14 +23,18 @@
             <xsl:if test="count(./item) = 0">
                 <statement>
                     <topic>
-                        <xsl:for-each select="ancestor::item">
+                        <xsl:attribute name="value">
+                            <!-- Handle all traversed items-->
+                            <xsl:for-each select="ancestor::item">
+                                <xsl:apply-templates select="code">
+                                    <xsl:with-param name="linkId" select="linkId/@value"/>
+                                </xsl:apply-templates>
+                            </xsl:for-each>
+                            <!-- Handle leaf item  -->
                             <xsl:apply-templates select="code">
                                 <xsl:with-param name="linkId" select="linkId/@value"/>
                             </xsl:apply-templates>
-                        </xsl:for-each>
-                        <xsl:apply-templates select="code">
-                            <xsl:with-param name="linkId" select="linkId/@value"/>
-                        </xsl:apply-templates>
+                        </xsl:attribute>
                     </topic>
                     <status>
                         <xsl:value-of select="document('questionnaireResponse.xml')/QuestionnaireResponse/status/@value"/>
@@ -43,12 +47,14 @@
             </xsl:if>
         </xsl:for-each>
     </xsl:template>
+    <!-- Create Topic based on expected Questionnaire nesting structure/layout -->
     <xsl:template match="code">
         <xsl:param name="linkId"/>
         <xsl:value-of select="code/@value"/>
         <xsl:value-of select="$pipe"/>
         <xsl:value-of select="display/@value"/>
         <xsl:value-of select="$pipe"/>
+        <!-- Checks to see if there is an associated response code to add to topic -->
         <xsl:if test="document('questionnaireResponse.xml')//item/linkId[@value = $linkId]/../answer/valueCoding">
             <xsl:value-of select="document('questionnaireResponse.xml')//item/linkId[@value = $linkId]/../answer/valueCoding/code/@value"/>
             <xsl:value-of select="$pipe"/>
@@ -56,6 +62,7 @@
             <xsl:value-of select="$pipe"/>
         </xsl:if>
     </xsl:template>
+    <!-- Create result for ANF statement based on identified question response answer -->
     <xsl:template match="answer">
         <xsl:choose>
             <xsl:when test="valueBoolean">

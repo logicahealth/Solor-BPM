@@ -46,7 +46,6 @@
             <prefix value="1.1"/>
             <text value="Systolic Blood Pressure"/>
             <type value="integer"/>
-            <required value="true"/>
             <item>
                 <linkId value="fb5166c2-3d21-41c9-b0db-a51710d7886e"/>
                 <code>
@@ -57,6 +56,11 @@
                 <prefix value="1.1.1"/>
                 <text value="Procedure site"/>
                 <type value="choice"/>
+                <enableWhen>
+                    <question value="08bdd3d0-ba68-4589-afad-b11dd2445c47"/>
+                    <operator value="&gt;"/>
+                    <answerInteger value="0"/>
+                </enableWhen>
                 <answerValueSet value="#a773d2b4-cb02-4eff-ad1f-6043c36cb0c9"/>
             </item>
         </item>
@@ -70,7 +74,6 @@
             <prefix value="1.2"/>
             <text value="Diastolic Blood Pressure"/>
             <type value="integer"/>
-            <required value="true"/>
             <item>
                 <linkId value="47b5f243-a118-45c4-b366-45f480f32db1"/>
                 <code>
@@ -81,6 +84,11 @@
                 <prefix value="1.2.1"/>
                 <text value="Procedure site"/>
                 <type value="choice"/>
+                <enableWhen>
+                    <question value="5772af68-dcdb-4cc1-b4cc-00dd396c245b"/>
+                    <operator value="&gt;"/>
+                    <answerInteger value="0"/>
+                </enableWhen>
                 <answerValueSet value="#a773d2b4-cb02-4eff-ad1f-6043c36cb0c9"/>
             </item>
         </item>
