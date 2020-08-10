@@ -124,7 +124,8 @@
     <xsl:template match="answer">
         <!-- Will need an extension to Range where Quantitiy is implemented versus SimpleQuantity -->
         <!-- Will need an extension to code (within Quantity extension) implements Coding -->
-        <!-- Will need an extension to value (within Quantity extension) that allows for infity -->
+        <!-- Will need an extension to value (within Quantity extension) that allows for infity
+                need to implement IEEE floating point initity representatino -->
         <xsl:choose>
             <xsl:when test="valueBoolean">
                 <xsl:choose>
@@ -139,7 +140,7 @@
                             </code>
                         </low>
                         <high>
-                            <value value="PINF"/>
+                            <value value="7F800000"/>
                             <comparator value="&lt;"/>
                             <code>
                                 <system value="http://snomed.info/sct"/>
